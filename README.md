@@ -7,7 +7,7 @@ For my week-long final project at Dev Bootcamp, I worked with three other studen
 * Web Client Code: [biteme_client](biteme_client)
 * Mobile Client Code: [biteme_ionic_client](biteme_ionic_client)
 * Server Code: [biteme_server](biteme_server)
+* Hosted at: http://bite-me.herokuapp.com/
 
 [![Video about the project](http://img.youtube.com/vi/bGCexMQNw4I/0.jpg)](http://www.youtube.com/watch?v=bGCexMQNw4I)
 
-Hosted at: http://bite-me.herokuapp.com/

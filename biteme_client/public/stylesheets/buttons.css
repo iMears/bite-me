@@ -1,0 +1,59 @@
+.btn-orange {
+  background-color: #e16120;
+  color: white;
+}
+
+.btn-teal {
+  background-color: #3c9892;
+  color: white;
+}
+
+#grab-btn {
+  width: 100%;
+  margin: 20px 0 40px 0;
+  color: white;
+}
+
+.btn-orange:hover {
+  color: white;
+  opacity: .8;
+}
+
+.btn-orange:visited {
+  color: white;
+}
+
+#save-btn {
+
+  width: 70%;
+  margin: 0 15%;
+}
+
+#start-btn {
+  width: 100%;
+  margin: 20px 0 10px;
+}
+
+#info-btn {
+  width: 100%;
+  margin: 20px 0;
+  background-color: #3C9892;
+}
+
+#more-info-btn {
+  width: 100%;
+  background-color: #3C9892;
+}
+
+.buttons {
+  position: absolute;
+}
+
+.logout-btn {
+  margin:  20px 10px;
+}
+
+.login-btn {
+  margin-top: 5px;
+  width: 100%;
+}

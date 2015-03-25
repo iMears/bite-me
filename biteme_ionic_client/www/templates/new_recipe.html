@@ -1,0 +1,35 @@
+<ion-view view-title='Add Recipe'>
+  <ion-content class='has-tabs'>
+    <h1 class='userPageTitle'>Create a Recipe</h1>
+    <div>
+      <form class='searchForm newRecipeForm'>
+        <input ng-model='newCustomRecipe.title' type='text' placeholder='Title'></input><br>
+        <input ng-model='newCustomRecipe.description' type='text' placeholder='Description'></input><br>
+        <input ng-model='newCustomRecipe.cuisine' type='text' placeholder='Cuisine'></input><br>
+        <h4 class='newRecipeSubtitle'>Ingredients</h4>
+        <div data-ng-repeat='ingredient in newCustomRecipe.ingredientsVerbose'>
+          <input class='customRecipeField' type='text' ng-model='ingredient.Name' name='' placeholder='Ingredient Name'>
+          <input class='customRecipeField' type='text' ng-model='ingredient.Quantity' name='' placeholder='Quantity'>
+          <input class='customRecipeField' type='text' ng-model='ingredient.Unit' name='' placeholder='Unit'>
+          <input class='customRecipeField'type='text' ng-model='ingredient.PreparationNotes' name='' placeholder='Preparation Note'>
+          <div class='buttonContainer'>
+            <button class='icon-left ion-plus addField' ng-show='showAddIngredient(ingredient)' ng-click='addNewIngredient()'>    Add Ingredient</button>
+          </div>
+        </div>
+        <h4 class='newRecipeSubtitle'>Instructions</h4>
+        <div data-ng-repeat='instruction in newCustomRecipe.instructions'>
+          <input class='customRecipeField' type='text' ng-model='instruction.content' name='' placeholder='Instruction'></input>
+          <div class='buttonContainer'>
+            <button class='icon-left ion-plus addField' ng-show='showAddInstruction(instruction)' ng-click='addNewInstruction()'>    Add Instruction</button>
+          </div>
+        </div>
+        <input ng-model='newCustomRecipe.imageURL' type='text' placeholder='Image URL'></input><br>
+        <input ng-model='newCustomRecipe.servings.yieldNumber' type='text' placeholder='Number of Servings'></input><br>
+        <input ng-model='newCustomRecipe.servings.yieldUnit' type='text' placeholder='Servings Unit'></input><br>
+      </form>
+      <div class='buttonContainer'>
+        <button class='mine' ng-click='saveRecipeCustom(newCustomRecipe)'>Create Recipe</button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

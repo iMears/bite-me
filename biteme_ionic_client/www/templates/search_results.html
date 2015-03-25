@@ -1,0 +1,31 @@
+<ion-view view-title='Search'>
+  <ion-content class='has-tabs'>
+    <form class='searchForm' ng-show='newSearch'>
+        <input ng-model='newSearch.term' type='text' placeholder='Find a Recipe'>
+      <div class='buttonContainer'>
+        <button class='mine' ng-click="getSearchResults()">Search</button>
+      </div>
+    </form>
+    <ion-list>
+      <ion-item ng-repeat='recipe in recipes.results' href='#/recipes/{{recipe.recipeID}}'>
+        <div class='imgContainer' style='background-image: url({{recipe.imageURL}})'></div>
+        <div class='listTextContainer'>
+          <h2 ng-bind='recipe.title'></h2></a>
+          <p>Rating: <span ng-bind='recipe.rating | number : 1'></span> out of 5</p>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
+
+<!-- <div class="tabs tabs-light tabs-icon-only">
+  <a class="tab-item">
+    <i class='icon ion-search'></i>
+  </a>
+  <a class="tab-item">
+    <i class='icon ion-person'></i>
+  </a>
+  <a class='tab-item'>
+    <i class='icon ion-edit'></i>
+  </a>
+</div> -->

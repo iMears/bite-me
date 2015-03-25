@@ -1,0 +1,59 @@
+.header {
+  list-style-type: none;
+  background-color: #eeede6;
+  height: 115px;
+}
+
+.footer {
+  background-color: #eeede6;
+  height: 200px;
+  bottom: 0;
+}
+
+.search-window {
+  margin-top: 50px;
+  display: block;
+}
+
+.recipe-container {
+  width: 80%;
+  margin-left: 10%;
+}
+
+.recipe-item {
+  display: inline-block;
+  height: 300px;
+  min-width: 300px;
+  min-height: 425px;
+  overflow: hidden;
+}
+
+.recipe-info {
+  text-align: center;
+}
+
+.speech-bar {
+  position: fixed;
+  min-height: 200px;
+  background-color: #3c9892;
+  border-radius: 7px 0;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  z-index: 999;
+}
+
+#serving-size {
+  display: inline-block;
+  width: 25px;
+  border-radius: 7px;
+
+}
+
+.help {
+  margin-bottom: 40px;
+}
+
+.bottom-spacer {
+  height: 200px;
+}

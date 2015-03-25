@@ -1,0 +1,50 @@
+<ion-view view-title='Recipe'>
+  <ion-content class='has-tabs'>
+    <img class='mainImg' ng-src='{{recipe.imageURL}}' alt='recipe photo' />
+
+    <h1 class='recipeTitle' ng-bind='recipe.title'></h1>
+    <h2 class='recipeDesc' ng-bind='recipe.description' ng-show='recipe.description.length != 0'></h2>
+    <h3 class='recipeRating'><span ng-bind='recipe.rating | number : 1'></span> out of 5</h3>
+
+    <i class='ion ion-heart' ng-class="{'saved':saved}" ng-click='saveRecipe()'></i>
+
+    <h4 class='recipeSubtitle'>Ingredients:</h4>
+    <h5 class='servingSize'>Servings: <input class='servingInput' ng-change='updateServings()' name='numServings' ng-model='recipe.servings.yieldNumber' ng-maxlength='3'></input></h5>
+    <ul>
+      <li class='ingredientItem' ng-repeat='ingredient in ingredients track by $index' ng-bind='ingredient'></li>
+    </ul>
+    <h4 class='recipeSubtitle'>Instructions:</h4>
+    <ol>
+      <li class='instructionItem' ng-repeat='instruction in instructions track by $index' ng-bind='instruction'></li>
+    <ol>
+
+    <div class='buttonContainer'>
+      <button class='mine' ng-click='startCaesar()' ng-show='inProgress == false'>Start Caesar</button>
+    </div>
+
+    <div class='overlay' ng-show='inProgress == true' ng-click='stopCaesar()'>
+      <div id='countdown' ng-class='{invisible: invisibleTimer}'>
+        <p class='timer' ng-bind='seconds | formatTime' ng-show='seconds > 0'></p>
+      </div>
+      <p class='caesarSpeech' ng-bind='caesarSpeech'></p>
+    </div>
+
+    <div id='textToSpeech'>
+      <textarea id='text' ng-bind='caesarSpeech'></textarea>
+      <input id='playButton' onclick="responsiveVoice.speak($('#text').val(),$('#voiceselection').val());" type='button' value='Play'
+      />
+    </div>
+  </ion-content>
+</ion-view>
+
+<!-- <div class="tabs tabs-light tabs-icon-only">
+  <a class="tab-item">
+    <i class='icon ion-search'></i>
+  </a>
+  <a class="tab-item">
+    <i class='icon ion-person'></i>
+  </a>
+  <a class='tab-item'>
+    <i class='icon ion-edit'></i>
+  </a>
+</div> -->

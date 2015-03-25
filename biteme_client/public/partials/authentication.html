@@ -1,0 +1,86 @@
+<p ng-bind='error' style='color: red'></p>
+
+<div class="container-fluid">
+
+  <div class="col-md-4 col-md-offset-4">
+    <br><br><br>
+    <h3 class="text-center">Welcome! In order to save recipes...</h3>
+    <div class="btn btn-primary btn-lg login-btn" ng-click='login()'>
+      Login with Facebook
+    </div>
+    <br><br><br>
+    <h3 class="text-center">Or, you can...</h3>
+    <a href="#/search_results" class="btn btn-orange btn-lg login-btn">
+      Get straight to cooking!
+    </a>
+    <br><br><br>
+    <h3 class="text-center">First time here?</h3>
+    <div id="more-info-btn" class="btn btn-lg btn-primary" ng-click="show=!show">
+      More information
+    </div>
+    <div class="more-info" ng-show="show">
+      <br><br>
+      <h4 class="text-center">Note:</h4>
+      <ul>
+        <li>
+          <h5 class="help">This app is only compatible with <a href="https://www.google.com/chrome/browser/desktop/index.html">Google Chrome</a>.</h5>
+        </li>
+      </ul>
+      <h4 class="text-center">What is Bite Me?</h4>
+      <ul>
+        <li>
+          <h5>A voice-controlled kitchen helper app that makes cooking from a recipe a hands-free experience.</h5>
+        </li>
+      </ul>
+      <br>
+      <h4 class="text-center">How to use Bite Me:</h4>
+      <ul>
+        <li>
+          <h5>Find and select a recipe</h5>
+        </li>
+        <li>
+          <h5>Make sure your volume is turned up</h5>
+        </li>
+        <li>
+          <h5>Press the "Start Cooking" button</h5>
+        </li>
+        <li>
+          <h5>Allow Bite Me to access your microphone by selecting "allow" in the top right corner of your browser</h5>
+        </li>
+        <li>
+          <h5>Talk to Caesar using the provided commands</h5>
+        </li>
+        <li>
+          <h5>Have fun cooking with Caesar!</h5>
+        </li>
+      </ul>
+      <br>
+      <h4 class="text-center">Caesar Commands:</h4>
+      <ul>
+        <li>
+          <h5>"Next step" - Get next step in recipe</h5>
+        </li>
+        <li>
+          <h5>"Repeat step" - Get last step in recipe</h5>
+        </li>
+        <li>
+          <h5>"How much (flour)" - Get quantity of given ingredient</h5>
+        </li>
+        <li>
+          <h5>"Set timer for (10) minutes" - Set timer for given duration</h5>
+        </li>
+        <li>
+          <h5>"Goodbye Caesar" - End cooking instructions</h5>
+        </li>
+        <li>
+          <h5>"Caesar tell me a joke" - Easter egg</h5>
+        </li>
+        <li>
+          <h5>"Caesar help" - Prompt Caesar for help</h5>
+        </li>
+      </ul>
+      <br><br><br>
+    </div>
+  </div>
+
+</div> <!-- end container-fluid  -->
